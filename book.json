@@ -1,0 +1,114 @@
+{
+  "root": "./bookshelf/",
+  "title": "书架",
+  "author": "WilenWu",
+  "description": "from YAML",
+  "language": "zh-hans",
+  
+  "structure": {
+    "readme": "README.md",
+    "summary": "SUMMARY.md"
+  },  
+  
+  "links": {
+    "sidebar": {
+        "<font size=5><i class='fa fa-home'></i></font>": "https://wilenwu.github.io"
+    }
+  },
+  
+  "variables": {
+      "themeFexa":{
+          "showHome": false, 
+          "showNavigator": false, 
+          "nav": [
+              {
+                  "url":"http://wilenwu.github.io",
+                  "target":"_blank",
+                  "name": "首页"
+              }
+          ]
+      }
+  },
+    
+  "plugins": [
+    "theme-comscore",
+    "custom-favicon",
+    "-sharing", 
+    "search-pro",  "-search",  "-lunr",
+    "expandable-chapters",
+    "splitter",
+    "anchor-navigation-ex",
+    "hide-element",
+    "tbfed-pagefooter",
+    "github", 
+    "donate",
+    "mygitalk",
+    "popup", 
+    "copy-code-button",
+    "codeblock-filename",
+    "advanced-emoji",
+    "flexible-alerts",
+    "emphasize",
+    "katex",
+    "mermaid",
+    "pageview-count",
+    "sitemap",
+    "baidu"
+  ],
+  
+  "pluginsConfig": {
+        "theme-default": {
+            "showLevel": true
+        },
+        "favicon": "images/github32.png",
+        "search-pro": {
+          "cutWordLib": "nodejieba",
+          "defineWord" : ["Gitbook Use"]
+        },
+       "anchor-navigation-ex": {
+         "showLevel": true,
+         "associatedWithSummary": false,
+         "printLog": false,
+         "multipleH1": true,
+         "mode": "float"
+        },
+     "hide-element": {
+          "elements": [".gitbook-link"]
+        },
+      "tbfed-pagefooter": {
+        "copyright":"Copyright &copy WilenWu",
+        "modify_label": "更新于 ",
+        "modify_format": "YYYY-MM-DD HH:mm:ss"
+      },
+       "github": {
+         "url": "https://github.com/wilenwu/wilenwu.github.io"
+      },
+      "donate": {
+        "button": "赏",
+        "alipayText": " ",
+        "alipay": "./images/nezha.jpg"
+      },
+      "mygitalk": {
+            "clientID": "60decc199e52a19f035d",
+            "clientSecret": "fe95a75c03105bf4566a72968f6dfcfd3b861344",
+            "repo": "gitalk",
+            "owner": "wilenwu",
+            "admin": ["wilenwu"],
+            "distractionFreeMode": true
+        },
+      "flexible-alerts": {
+        "style": "callout",
+        "comment": {
+          "label": "Comment",
+          "icon": "fa fa-comments",
+          "className": "info"
+        }
+      }, 
+      "sitemap": {
+          "hostname": "http://wilenwu.github.io"
+      },
+      "baidu": {
+        "token": "873a3ba02856122b60c91114a489f967"
+      }
+    }
+}

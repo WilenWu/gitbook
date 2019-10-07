@@ -1,0 +1,151 @@
+{
+  // Path to lookup for your documentation defaults to the root directory of the repository.
+  // All other options that specify paths will be relative to this root folder
+  "root": "./bookshelf/",
+  "title": "书架",
+  "author": "WilenWu",
+  "description": "from YAML",
+  "language": "zh-hans",
+  
+  // Files to use as SUMMARY/README.
+  // Relative to <root> directory
+  "structure": {
+    "readme": "README.md",
+    "summary": "SUMMARY.md",
+    "glossary": "GLOSSARY.md",
+    "languages": "LANGS.md"
+  },
+  
+  "styles": {
+    "website": "styles/website.css",
+    "ebook": "styles/ebook.css",
+    "pdf": "styles/pdf.css",
+    "mobi": "styles/mobi.css",
+    "epub": "styles/epub.css"
+  },
+  
+  "links": {
+    "sidebar": {
+        "<i class='fa fa-download'></i> Home": "https://wilenwu.github.io"
+  },
+  
+  // Redirect urls to specific files 
+  // Relative to the <root> directory
+  "redirects": {
+    "help/contact": "./contact.md"
+  },
+  
+  "variables": {
+      "themeFexa":{
+          "showHome": false, //是否显示 home 图标，默认显示
+          "showNavigator": false, //是否显示 内容的导航树
+          "nav":[
+              {
+                  "url":"http://wilenwu.github.io",
+                  "target":"_blank",
+                  "name": "主页"
+              },
+              {
+                  "url":"http://wilenwu.github.io",
+                  "target":"_blank",
+                  "name": "分类"
+              }
+          ]
+      }
+  },
+    
+  "plugins": [
+    "theme-fexa-black", "-sharing",  // "theme-comscore",
+     //"custom-favicon", //标题栏图标(theme-fexa主题包含)
+    "search-pro",  "-search",  "-lunr",
+    "expandable-chapters",  //折叠侧边栏
+    "splitter",  //侧边栏宽度可调节
+    "anchor-navigation-ex",  //悬浮按钮目录+回到顶部
+    // "anchor-navigation", //锚点导航
+    // "back-to-top-button",  "page-toc-button",
+    "hide-element", // 侧边栏不必要信息隐藏
+    "tbfed-pagefooter", //页脚   
+    "github", // 右上角github图标
+    "donate",  // 打赏
+    "disqus",
+    "lightbox", //弹窗显示图片
+    //"popup", //打开新的页面查看图片
+    "todo", // 复选框  
+    "prism",  "-highlight",
+    "copy-code-button",
+    "codeblock-filename", //为代码块添加文件名称
+    "advanced-emoji",
+    "flexible-alerts", // note标签插件 NOTE | TIP | WARNING | DANGER
+    "emphasize", //文字底色 {% em type="green" %}highlighted in green!{% endem %}
+    "katex",
+    "mermaid",
+    "pageview-count", // 阅读量计数
+    "auto-scroll-table", // 表格滚动条
+    "sitemap",
+    "baidu"
+  ],
+  
+  "pluginsConfig": {
+        "theme-fexa":{
+            "search-placeholder":"输入关键字搜索", //搜索框提示信息
+            "logo":"./logo.png", //logo地址
+            "favicon": "./favicon.ico" //ico地址
+        }
+    }, 
+    "search-pro": {
+        "cutWordLib": "nodejieba",
+        "defineWord" : ["Gitbook Use"]
+    },    
+     "favicon": "images/github32.png",    
+    "disqus": {
+        "shortName": "gitbookuse"
+    },        
+     "hide-element": {
+            "elements": [".gitbook-link"]
+        },
+     "github": {
+       "url": "https://github.com/wilenwu/wilenwu.github.io"
+    },
+    "donate": {
+      "button": "打赏",
+      "alipayText": "支付宝",
+      //"wechatText": "微信",
+      "alipay": "images/nezha.png",
+      //"wechat": "url"
+    },
+    "prism": {
+      "css": [
+        "prismjs/themes/prism-solarizedlight.css"
+      ],
+      "lang": {
+        "shell": "bash"
+      }
+    },
+    "tbfed-pagefooter": {
+      "copyright":"Copyright &copy WilenWu",
+      "modify_label": "更新于 ",
+      "modify_format": "YYYY-MM-DD HH:mm:ss"
+    },
+    "flexible-alerts": {
+      "style": "callout",
+      "comment": {  // comment 个性化
+        "label": "Comment",
+        "icon": "fa fa-comments",
+        "className": "info"
+      }
+    },   
+    "anchor-navigation-ex": {
+      "showLevel": true,
+      "associatedWithSummary": false,
+      "printLog": false,
+      "multipleH1": true,
+      "mode": "float"
+    },
+    "sitemap": {
+        "hostname": "http://wilenwu.github.io"
+    },
+    "baidu": {
+      "token": "873a3ba02856122b60c91114a489f967"
+    }
+}
+}
