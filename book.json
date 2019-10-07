@@ -2,7 +2,6 @@
   "root": "./bookshelf/",
   "title": "书架",
   "author": "WilenWu",
-  "description": "from YAML",
   "language": "zh-hans",
   
   "structure": {
@@ -17,17 +16,6 @@
   },
   
   "variables": {
-      "themeFexa":{
-          "showHome": false, 
-          "showNavigator": false, 
-          "nav": [
-              {
-                  "url":"http://wilenwu.github.io",
-                  "target":"_blank",
-                  "name": "首页"
-              }
-          ]
-      }
   },
     
   "plugins": [
@@ -41,9 +29,7 @@
     "hide-element",
     "tbfed-pagefooter",
     "github", 
-    "donate",
     "mygitalk",
-    "popup", 
     "copy-code-button",
     "codeblock-filename",
     "advanced-emoji",
@@ -58,7 +44,7 @@
   
   "pluginsConfig": {
         "theme-default": {
-            "showLevel": true
+            "showLevel": false
         },
         "favicon": "images/github32.png",
         "search-pro": {
@@ -82,11 +68,6 @@
       },
        "github": {
          "url": "https://github.com/wilenwu/wilenwu.github.io"
-      },
-      "donate": {
-        "button": "赏",
-        "alipayText": " ",
-        "alipay": "./images/nezha.jpg"
       },
       "mygitalk": {
             "clientID": "60decc199e52a19f035d",
