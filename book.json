@@ -30,7 +30,7 @@
     "advanced-emoji",
     "flexible-alerts",
     "emphasize",
-    "katex",
+    "katex-plus",
     "mermaid",
     "pageview-count",
     "sitemap",
@@ -72,6 +72,11 @@
             "admin": ["wilenwu"],
             "distractionFreeMode": true
         },
+      "prism": {
+        "css": [
+          "prismjs/themes/prism-okaidia.css"
+        ]
+      },
       "flexible-alerts": {
         "style": "callout",
         "comment": {
