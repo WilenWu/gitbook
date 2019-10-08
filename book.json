@@ -9,12 +9,6 @@
     "summary": "SUMMARY.md"
   },  
   
-  "links": {
-    "sidebar": {
-        "<font size=5><i class='fa fa-home'></i></font>": "https://wilenwu.github.io"
-    }
-  },
-  
   "variables": {
   },
     
@@ -30,6 +24,7 @@
     "tbfed-pagefooter",
     "github", 
     "mygitalk",
+    "prism",  "-highlight",  
     "copy-code-button",
     "codeblock-filename",
     "advanced-emoji",
