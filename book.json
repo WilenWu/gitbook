@@ -1,11 +1,11 @@
 {
-  "root": "./bookshelf/",
+  "root": "./statsmodels/",
   "title": "书架",
   "author": "WilenWu",
   "language": "zh-hans",
   
   "structure": {
-    "readme": "README.md",
+    "readme": "GettingStarted.md",
     "summary": "SUMMARY.md"
   },  
   
