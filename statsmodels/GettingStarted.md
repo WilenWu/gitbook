@@ -17,8 +17,8 @@ sticky: false
 -   非参数方法： 核密度估计，核回归。  
 -   统计模型结果可视化。  
   
-statsmodels更关注统计推断，提供不确定估计和参数p-value。相反的，scikit-learn注重预测。  
-[Table of Contents](http://www.statsmodels.org/stable/index.html#table-of-contents)  
+[statsmodels](http://www.statsmodels.org/stable/index.html#table-of-contents)更关注统计推断，提供不确定估计和参数p-value。相反的，scikit-learn注重预测。  
+ 
   
 <!-- more -->  
    

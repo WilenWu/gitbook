@@ -8,17 +8,17 @@ date: 2018-12-19 16:59:00
 categories: [python,Machine Learning]  
 sticky: false  
 ---
-  
+
 # [Contingency Tables(列联表)](http://www.statsmodels.org/stable/contingency_tables.html)  
-  
+
 Statsmodels支持各种分析列联表的方法，包括评估独立性，对称性，同质性的方法，以及处理来自分层人群的表集合的方法。  
-  
+
 这里描述的方法主要用于双向表。可以使用对数线性模型分析多路表。Statsmodels目前没有statsmodels.genmod.GLM用于对数线性建模的专用API，但Poisson回归可用于此目的。  
-  
+
 `from statsmodels import stats`  
-  
+
 <!-- more -->  
-  
+
 类|说明  
 :------|:------  
 Table|双向应变表列联表  
@@ -27,7 +27,7 @@ SquareTable|分析方形列联表的方法
 StratifiedTable|分析2×2列联表的集合  
 mcnemar|McNemar同质性测试  
 cochrans_q|Cochran对相同二项式比例的Q检验  
-  
+
 statsmodels.stats.Table是使用列联表的最基本的类。我们可以Table直接从任何包含列联表单元格计数的矩形数组对象创建对象：  
 ```python  
 In [1]: import numpy as np  
@@ -37,17 +37,17 @@ In [4]: df = sm.datasets.get_rdataset("Arthritis", "vcd").data
 In [5]: tab = pd.crosstab(df['Treatment'], df['Improved'])  
 In [6]: tab = tab.loc[:, ["None", "Some", "Marked"]]  
 In [7]: table = sm.stats.Table(tab)  
-```  
+```
 或者，我们可以传递原始数据，让Table类为我们构建单元格数组：  
 ```python  
 In [8]: table = sm.stats.Table.from_data(df[["Treatment", "Improved"]])  
-```  
-  
+```
+
 ## Independence(独立性)  
 独立性(Independence)是行和列因子独立出现的属性。联合(Association)缺乏独立性。如果联合分布是独立的，则可以将其写为行和列边缘分布的外积  
-  
+
 $P_ {ij} = \sum_k P_ {ij} \cdot \sum_k P_ {kj}$   
-  
+
 - 我们可以为我们观察到的数据获得最佳拟合的独立分布，然后查看识别最强烈违反独立性的特定残差  
 ```python  
 In [9]: print(table.table_orig)  
@@ -67,7 +67,7 @@ Improved     Marked      None      Some
 Treatment                                
 Placebo   -1.936992  1.617492 -0.062257  
 Treated    1.983673 -1.656473  0.063758  
-```  
+```
 - 如果表的行和列是无序的（即名义变量，nominal factors），那么正式评估独立性的最常用方法是使用Pearson的$\chi^2$统计。  
 ```python  
 In [12]: rslt = table.test_nominal_association()  
@@ -80,17 +80,18 @@ Improved     Marked      None      Some
 Treatment                                
 Placebo    3.751938  2.616279  0.003876  
 Treated    3.934959  2.743902  0.004065  
-```  
+```
 - 对于有序行和列因子(factors)的表，我们可以通过线性相关检验，以获得更多权重来对抗关于排序的替代假设。线性相关检验的统计量为  
 $\sum_k r_i c_j T_ {ij}$  
   
+
 $r_i ,c_j$是行和列分数。通常将这些分数设置为序列0,1，....   
 这给出了Cochran-Armitage趋势测试。  
 ```python  
 In [15]: rslt = table.test_ordinal_association()  
 In [16]: print(rslt.pvalue)  
 0.023644578093923983  
-```  
+```
 - 我们可以评估再 $r \times x$ 表中的关联，通过构建一系列$2 \times 2$表格，并计算它们的比值比(OR)。有两种方法可以做到这一点。从相邻行和列类别的本地优势比(**local odds ratios**)来构建$2 \times 2$表。  
 ```python  
 In [17]: print(table.local_oddsratios)  
@@ -106,7 +107,7 @@ In [19]: print(taloc.oddsratio)
 In [20]: taloc = sm.stats.Table2x2(np.asarray([[29, 7], [13, 7]]))  
 In [21]: print(taloc.oddsratio)  
 2.230769230769231  
-```  
+```
 - 也可以通过在每个可能的点上对行和列因子进行二分法的累积比值比(**cumulative odds ratios**)来构建$2 \times 2$表。  
 ```python  
 In [22]: print(table.cumulative_oddsratios)  
@@ -124,20 +125,20 @@ In [26]: tab1 = np.asarray([[7 + 29, 7], [21 + 13, 7]])
 In [27]: tacum = sm.stats.Table2x2(tab1)  
 In [28]: print(tacum.oddsratio)  
 1.0588235294117647  
-```  
+```
 - 马赛克图(mosaic plot)是一种非正式评估双向表中依赖性的图形方法。  
 ```python  
 from statsmodels.graphics.mosaicplot import mosaic  
 mosaic(data)  
-```  
+```
 ## Symmetry and homogeneity(对称性和同质性)  
-  
+
 Symmetry(对称性) is the property  
  that $P_{i,j}=P_{j,i}$  for every i and j。   
  Homogeneity(同质性)是行因子和列因子的边际分布相同的特性  
 meaning that  $\sum_j P_ {ij} = \sum_j P_ {ji}$ for all i  
 > 注意，P (and T)必须是正方形，行和列类别必须相同，并且必须以相同的顺序出现。  
-  
+
 为了说明，我们加载数据集，创建列联表，并计算行和列边距(the row and column margins)。本`Table`类包含分析方法$r \times c$列联表。下面加载的数据集包含人们左眼和右眼视敏度的评估。我们首先加载数据并创建一个列联表。  
 ```python  
 In [29]: df = sm.datasets.get_rdataset("VisualAcuity", "vcd").data  
@@ -180,8 +181,8 @@ In [40]: print(sqtab.summary())
 Symmetry       19.107   0.004  6  
 Homogeneity    11.957   0.008  3  
 --------------------------------  
-```  
-  
+```
+
 ## A single 2x2 table(单个2x2表)  
 `sm.stats.Table2x2`类提供了几种处理单个2x2表的方法。summary方法显示表的行和列之间的若干关联度量。  
 ```python  
@@ -207,11 +208,11 @@ Log odds ratio    1.352 0.365 0.636 2.068   0.000
 Risk ratio        2.194       1.436 3.354   0.000  
 Log risk ratio    0.786 0.216 0.362 1.210   0.000  
 -------------------------------------------------  
-```  
-  
+```
+
 ## Stratified 2x2 tables(分层2x2表)  
 当我们有一组由同样行和列因子定义的列联表时，就会发生分层。  
-  
+
 **案例**  
 - 我们有一组2x2表，反映了中国几个地区吸烟和肺癌的联合分布。表格可能都具有共同的比值比，即使边际概率在各阶层之间变化也是如此。  
 - “Breslow-Day”程序测试数据是否与常见优势比一致。它在下面显示为常数OR的测试。  
@@ -241,4 +242,5 @@ Max n            2900
 Avg n            1052    
 Total n          8419    
 -----------------------  
-```  
+```
+

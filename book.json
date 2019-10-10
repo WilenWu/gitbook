@@ -1,6 +1,6 @@
 {
   "root": "./statsmodels/",
-  "title": "书架",
+  "title": "statsmodels",
   "author": "WilenWu",
   "language": "zh-hans",
   
@@ -9,8 +9,11 @@
     "summary": "SUMMARY.md"
   },  
   
-  "variables": {
-  },
+"links" : {
+    "sidebar" : {
+        "<font size=6><i class='fa fa-home'></i></font>": "https://wilenwu.github.io"
+    }
+},
     
   "plugins": [
     "theme-comscore",
