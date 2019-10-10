@@ -11,7 +11,6 @@ sticky: false
 
 # [Linear Regression(线性回归)](https://www.statsmodels.org/stable/regression.html)  
 
-
 `import statsmodels.api as sm`  
 适用于自变量X和因变量Y为线性关系，具体来说，画出散点图可以用一条直线来近似拟合。一般线性模型要求观测值之间相互独立、残差(因变量)服从正态分布、残差(因变量)方差齐性  
 统计模型被假定为 $Y=Xβ+μ,  μ\sim N(0,Σ)$  
@@ -47,22 +46,22 @@ df_resid|剩余自由度，定义为观察数减去回归矩阵的rank
 
 **Results Classes**  
 
-Results Classes|结果类  
-:---|:---  
-RegressionResults|总结了线性回归模型的拟合  
-OLSResults|OLS模型的结果类  
-PredictionResults|	  
-QuantRegResults|QuantReg模型的结果实例  
+| Results Classes   | 结果类                   |
+| :---------------- | :----------------------- |
+| RegressionResults | 总结了线性回归模型的拟合 |
+| OLSResults        | OLS模型的结果类          |
+| PredictionResults |                          |
+| QuantRegResults   | QuantReg模型的结果实例   |
 
-Methods|desc  
-:---|:---  
-aic(), bic(), bse()...|  
-cov_params()|返回方差/协方差矩阵  
-eigenvals()|返回按降序排序的特征值  
-fvalue(), pvalues(), f_pvalue(), tvalues()|  
-f_test(r_matrix), t_test()|F检验，t检验  
-get_prediction()|计算预测结果  
-save(fname), load(fname)|保存pickle，加载（类方法）  
+| Methods                                    | desc                       |
+| :----------------------------------------- | :------------------------- |
+| aic(), bic(), bse()...                     |                            |
+| cov_params()                               | 返回方差/协方差矩阵        |
+| eigenvals()                                | 返回按降序排序的特征值     |
+| fvalue(), pvalues(), f_pvalue(), tvalues() |                            |
+| f_test(r_matrix), t_test()                 | F检验，t检验               |
+| get_prediction()                           | 计算预测结果               |
+| save(fname), load(fname)                   | 保存pickle，加载（类方法） |
 
 **Examples**   
 ```python  
@@ -105,22 +104,24 @@ predict(_params_)|Return linear predicted values from a design matrix.
 score(_params_)|Evaluate the score function at a given point  
 
 **Results Classes**  
-Results Classes|结果类  
-:---|:---  
-GLMResults|包含GLM结果的类。  
-PredictionResults|	  
+
+| Results Classes   | 结果类            |
+| :---------------- | :---------------- |
+| GLMResults        | 包含GLM结果的类。 |
+| PredictionResults |                   |
 
 **Families**  
-Families|desc  
-:---|:---  
-Family(link,variances)|单参数指数族的父类。  
-Binomial(link=None)|二项式指数族分布。  
-Gamma(link=None)|Gamma指数族分布。  
-Gaussian(link=None)|高斯指数族分布。  
-InverseGaussian(link=None)|InverseGaussian指数族。  
-NegativeBinomial(link=None,alpha=None)|负二项指数族。  
-Poisson(link=None)|泊松指数族。  
-Tweedie(link=None,var_power=None)|Tweedie。  
+
+| Families                               | desc                    |
+| :------------------------------------- | :---------------------- |
+| Family(link,variances)                 | 单参数指数族的父类。    |
+| Binomial(link=None)                    | 二项式指数族分布。      |
+| Gamma(link=None)                       | Gamma指数族分布。       |
+| Gaussian(link=None)                    | 高斯指数族分布。        |
+| InverseGaussian(link=None)             | InverseGaussian指数族。 |
+| NegativeBinomial(link=None,alpha=None) | 负二项指数族。          |
+| Poisson(link=None)                     | 泊松指数族。            |
+| Tweedie(link=None,var_power=None)      | Tweedie。               |
 
 **Link Functions**  
 ```python  

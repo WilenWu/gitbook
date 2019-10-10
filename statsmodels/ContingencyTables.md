@@ -44,11 +44,13 @@ In [8]: table = sm.stats.Table.from_data(df[["Treatment", "Improved"]])
 ```
 
 ## Independence(独立性)  
+
 独立性(Independence)是行和列因子独立出现的属性。联合(Association)缺乏独立性。如果联合分布是独立的，则可以将其写为行和列边缘分布的外积  
 
 $P_ {ij} = \sum_k P_ {ij} \cdot \sum_k P_ {kj}$   
 
-- 我们可以为我们观察到的数据获得最佳拟合的独立分布，然后查看识别最强烈违反独立性的特定残差  
+我们可以为我们观察到的数据获得最佳拟合的独立分布，然后查看识别最强烈违反独立性的特定残差  
+
 ```python  
 In [9]: print(table.table_orig)  
 Improved   Marked  None  Some  
@@ -68,7 +70,9 @@ Treatment
 Placebo   -1.936992  1.617492 -0.062257  
 Treated    1.983673 -1.656473  0.063758  
 ```
-- 如果表的行和列是无序的（即名义变量，nominal factors），那么正式评估独立性的最常用方法是使用Pearson的$\chi^2$统计。  
+
+如果表的行和列是无序的（即名义变量，nominal factors），那么正式评估独立性的最常用方法是使用Pearson的$\chi^2$统计。  
+
 ```python  
 In [12]: rslt = table.test_nominal_association()  
   
@@ -81,10 +85,10 @@ Treatment
 Placebo    3.751938  2.616279  0.003876  
 Treated    3.934959  2.743902  0.004065  
 ```
-- 对于有序行和列因子(factors)的表，我们可以通过线性相关检验，以获得更多权重来对抗关于排序的替代假设。线性相关检验的统计量为  
+
+对于有序行和列因子(factors)的表，我们可以通过线性相关检验，以获得更多权重来对抗关于排序的替代假设。线性相关检验的统计量为  
 $\sum_k r_i c_j T_ {ij}$  
   
-
 $r_i ,c_j$是行和列分数。通常将这些分数设置为序列0,1，....   
 这给出了Cochran-Armitage趋势测试。  
 ```python  
@@ -92,7 +96,8 @@ In [15]: rslt = table.test_ordinal_association()
 In [16]: print(rslt.pvalue)  
 0.023644578093923983  
 ```
-- 我们可以评估再 $r \times x$ 表中的关联，通过构建一系列$2 \times 2$表格，并计算它们的比值比(OR)。有两种方法可以做到这一点。从相邻行和列类别的本地优势比(**local odds ratios**)来构建$2 \times 2$表。  
+
+我们可以评估再 $r \times x$ 表中的关联，通过构建一系列$2 \times 2$表格，并计算它们的比值比(OR)。有两种方法可以做到这一点。从相邻行和列类别的本地优势比(**local odds ratios**)来构建$2 \times 2$表。  
 ```python  
 In [17]: print(table.local_oddsratios)  
 Improved     Marked      None  Some  
@@ -108,7 +113,8 @@ In [20]: taloc = sm.stats.Table2x2(np.asarray([[29, 7], [13, 7]]))
 In [21]: print(taloc.oddsratio)  
 2.230769230769231  
 ```
-- 也可以通过在每个可能的点上对行和列因子进行二分法的累积比值比(**cumulative odds ratios**)来构建$2 \times 2$表。  
+
+也可以通过在每个可能的点上对行和列因子进行二分法的累积比值比(**cumulative odds ratios**)来构建$2 \times 2$表。  
 ```python  
 In [22]: print(table.cumulative_oddsratios)  
 Improved     Marked      None  Some  
@@ -126,7 +132,8 @@ In [27]: tacum = sm.stats.Table2x2(tab1)
 In [28]: print(tacum.oddsratio)  
 1.0588235294117647  
 ```
-- 马赛克图(mosaic plot)是一种非正式评估双向表中依赖性的图形方法。  
+
+马赛克图(mosaic plot)是一种非正式评估双向表中依赖性的图形方法。  
 ```python  
 from statsmodels.graphics.mosaicplot import mosaic  
 mosaic(data)  
@@ -184,6 +191,7 @@ Homogeneity    11.957   0.008  3
 ```
 
 ## A single 2x2 table(单个2x2表)  
+
 `sm.stats.Table2x2`类提供了几种处理单个2x2表的方法。summary方法显示表的行和列之间的若干关联度量。  
 ```python  
 In [41]: table = np.asarray([[35, 21], [25, 58]])  
@@ -211,6 +219,7 @@ Log risk ratio    0.786 0.216 0.362 1.210   0.000
 ```
 
 ## Stratified 2x2 tables(分层2x2表)  
+
 当我们有一组由同样行和列因子定义的列联表时，就会发生分层。  
 
 **案例**  
@@ -218,6 +227,7 @@ Log risk ratio    0.786 0.216 0.362 1.210   0.000
 - “Breslow-Day”程序测试数据是否与常见优势比一致。它在下面显示为常数OR的测试。  
 - Mantel-Haenszel程序测试这个常见优势比是否等于1。它在下面显示为OR = 1的测试。还可以估计共同的几率和风险比并获得它们的置信区间。  
 - summary方法显示所有这些结果。可以从类方法和属性中获得单个结果。  
+
 ```python  
 In [47]: data = sm.datasets.china_smoking.load()  
 In [48]: mat = np.asarray(data.data)  

@@ -1,11 +1,11 @@
 {
-  "root": "./statsmodels/",
-  "title": "statsmodels",
+  "root": "./bookshelf/",
+  "title": "书架",
   "author": "WilenWu",
   "language": "zh-hans",
   
   "structure": {
-    "readme": "GettingStarted.md",
+    "readme": "README.md",
     "summary": "SUMMARY.md"
   },  
   
@@ -17,8 +17,9 @@
     
   "plugins": [
     "theme-comscore",
-    "custom-favicon",
-    "-sharing", 
+    "custom-favicon", 
+    "insert-logo",
+    "-sharing",  "-fontsettings",
     "search-pro",  "-search",  "-lunr",
     "expandable-chapters",
     "splitter",
@@ -26,7 +27,7 @@
     "hide-element",
     "tbfed-pagefooter",
     "github", 
-    "mygitalk",
+    "mygitalk", 
     "prism",  "-highlight",  
     "copy-code-button",
     "codeblock-filename",
@@ -44,11 +45,15 @@
         "theme-default": {
             "showLevel": false
         },
-        "favicon": "images/github32.png",
+        "favicon": "github32.png",
         "search-pro": {
           "cutWordLib": "nodejieba",
           "defineWord" : ["Gitbook Use"]
         },
+    "insert-logo": {
+        "url": "open_book.png",
+        "style": "background: none; max-height: 30px; min-height: 30px"
+      },   
        "anchor-navigation-ex": {
          "showLevel": true,
          "associatedWithSummary": false,

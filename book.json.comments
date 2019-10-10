@@ -55,9 +55,10 @@
   },
     
   "plugins": [
-    "theme-fexa-black", "-sharing",  // "theme-comscore",
+    "theme-fexa-black", "-sharing", "-fontsettings", // "theme-comscore",
      //"custom-favicon", //标题栏图标(theme-fexa主题包含)
     "search-pro",  "-search",  "-lunr",
+    "insert-logo", // "logo"
     "expandable-chapters",  //折叠侧边栏
     "splitter",  //侧边栏宽度可调节
     "anchor-navigation-ex",  //悬浮按钮目录+回到顶部
@@ -66,11 +67,12 @@
     "hide-element", // 侧边栏不必要信息隐藏
     "tbfed-pagefooter", //页脚   
     "github", // 右上角github图标
-    "donate",  // 打赏
-    "disqus",
-    "lightbox", //弹窗显示图片
-    //"popup", //打开新的页面查看图片
-    "todo", // 复选框  
+    "donate",  // 打赏   
+    //"lightbox", //弹窗显示图片
+    "popup", //打开新的页面查看图片
+    //"todo", // 复选框  
+    "mygitalk",  // "disqus",
+    "auto-scroll-table",
     "prism",  "-highlight",
     "copy-code-button",
     "codeblock-filename", //为代码块添加文件名称
@@ -90,12 +92,28 @@
             "search-placeholder":"输入关键字搜索", //搜索框提示信息
             "logo":"./logo.png", //logo地址
             "favicon": "./favicon.ico" //ico地址
-        }
-    }, 
+        },
+      "fontsettings": {
+        "theme": "sepia",
+        "family": "serif",
+        "size":  1
+    },
     "search-pro": {
         "cutWordLib": "nodejieba",
         "defineWord" : ["Gitbook Use"]
-    },    
+    },
+    "insert-logo": {
+        "url": "./images/open_book.png",
+        "style": "background: none; max-height: 30px; min-height: 30px"
+      },    
+    "logo": {
+      "rootStyle": "background-color: #a5b807; text-align: center; padding: 20px;",
+      "logo": "http://lanfly.vicp.io/logo.png",
+      "logoStyle": "width: 70px;",
+      "title": "提莫的神秘商店",
+      "titleStyle": "color: #FFF; text-align: center;",
+      "url": "http://timor.tech"
+    },  
      "favicon": "images/github32.png",           
      "hide-element": {
             "elements": [".gitbook-link"]
