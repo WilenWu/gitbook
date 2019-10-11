@@ -1,7 +1,6 @@
 ---
-
-title: R手册(Visualise)--geomnet(ggplot2 extensions)
-tags: [R]
+ID: c4eb4efde86c3b142cb8d7f2b90cf623
+tags: [R,ggplot2]
 mathjax: false
 copyright: true
 date: 2018-05-29 18:26:11
@@ -9,18 +8,9 @@ categories: [R,Visualise]
 sticky: false
 ---
 
+# geomnet
 
-**目录**
-
-
---------
-
-[返回ggplot2扩展主目录](https://blog.csdn.net/qq_41518277/article/details/80516938)
-
-<!-- more -->
-## geomnet
-
-**Geom** ：网格图(关系图)
+## Geom ：网格图(关系图)
 
 ```r
   geom_net(aes(from_id,to_id,fontsize), data , stat = "net",
@@ -28,16 +18,22 @@ sticky: false
     directed=FALSE,selfloops=FALSE,singletons=TRUE, 
     labelon = FALSE,labelcolour = NULL, labelgeom = "text") #label参数
 ```
-**网格图主题**  `theme_net(base_size,base_family) ` 
-  > 参数：
-  > layout.alg,布局
-  > directed=FALSE,箭头
-  > selfloops=FALSE,显示循环
-  > singletons=TRUE,单点绘制
-  > directed箭头参数：
-  > arrow = NULL, arrowgap = 0.01, arrowsize = 1
 
-**ggplot2主题元素的继承关系示意图**
+## 网格图主题
+
+`theme_net(base_size,base_family)` 
+
+参数：
+
+- layout.alg,布局
+- directed=FALSE,箭头
+- selfloops=FALSE,显示循环
+- singletons=TRUE,单点绘制
+- directed箭头参数：
+- arrow = NULL, arrowgap = 0.01, arrowsize = 1
+
+## ggplot2主题元素的继承关系示意图
+
 ```r  
 library(dplyr)
 library(geomnet)
@@ -59,8 +55,11 @@ ggplot(data = TEnet,
   theme_net() +
   xlim(c(-0.05, 1.05))
 ```
-![1](https://img-blog.csdn.net/2018053023203095?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTE4Mjc3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
-**献血图**
+
+![](images/geom_net.png)
+
+## 献血图
+
 ```r
 library(geomnet)
 data(blood)
@@ -72,10 +71,11 @@ ggplot(data = blood$edges, aes(from_id = from, to_id = to)) +
   theme_net() 
 ```
 
-![2](https://img-blog.csdn.net/20180530232219498?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNTE4Mjc3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![](images/geom_net_blood.png)
 
-**与`plotly`互动**
-```
+## 与`plotly`互动
+
+```R
 library(geomnet)
 # devtools::install_github("ropensci/plotly")
 library(plotly)

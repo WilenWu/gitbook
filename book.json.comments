@@ -26,7 +26,7 @@
   
   "links": {
     "sidebar": {
-        "<font size=6><i class='fa fa-home'></i></font>": "https://wilenwu.github.io"
+        "<font size=5><i class='fa fa-home'></i></font>": "https://wilenwu.github.io"
   },
   
   // Redirect urls to specific files 
@@ -55,8 +55,8 @@
   },
     
   "plugins": [
-    "theme-fexa-black", "-sharing", "-fontsettings", // "theme-comscore",
-     //"custom-favicon", //标题栏图标(theme-fexa主题包含)
+    "theme-comscore", "-sharing", "-fontsettings", // "theme-fexa-black",
+    "custom-favicon", //标题栏图标(theme-fexa主题包含)
     "search-pro",  "-search",  "-lunr",
     "insert-logo", // "logo"
     "expandable-chapters",  //折叠侧边栏
@@ -67,12 +67,12 @@
     "hide-element", // 侧边栏不必要信息隐藏
     "tbfed-pagefooter", //页脚   
     "github", // 右上角github图标
-    "donate",  // 打赏   
+    "donate",  // 打赏    
+    "mygitalk",  // "disqus" 国内不支持
+    "auto-scroll-table",  //表格滚动条（会改变标题栏颜色？）
     //"lightbox", //弹窗显示图片
     "popup", //打开新的页面查看图片
-    //"todo", // 复选框  
-    "mygitalk",  // "disqus",
-    "auto-scroll-table",
+    "todo", // 复选框（有bug）
     "prism",  "-highlight",
     "copy-code-button",
     "codeblock-filename", //为代码块添加文件名称
@@ -82,30 +82,29 @@
     "katex",
     "mermaid",
     "pageview-count", // 阅读量计数
-    "auto-scroll-table", // 表格滚动条
     "sitemap",
     "baidu"
   ],
   
   "pluginsConfig": {
-        "theme-fexa":{
-            "search-placeholder":"输入关键字搜索", //搜索框提示信息
-            "logo":"./logo.png", //logo地址
-            "favicon": "./favicon.ico" //ico地址
-        },
-      "fontsettings": {
-        "theme": "sepia",
-        "family": "serif",
-        "size":  1
+    "theme-fexa":{
+      "search-placeholder":"输入关键字搜索", //搜索框提示信息
+      "logo":"./logo.png", //logo地址
+      "favicon": "./favicon.ico" //ico地址
+    },
+    "fontsettings": {
+      "theme": "sepia",
+      "family": "serif",
+      "size":  1
     },
     "search-pro": {
-        "cutWordLib": "nodejieba",
-        "defineWord" : ["Gitbook Use"]
+      "cutWordLib": "nodejieba",
+      "defineWord" : ["Gitbook Use"]
     },
     "insert-logo": {
-        "url": "./images/open_book.png",
-        "style": "background: none; max-height: 30px; min-height: 30px"
-      },    
+      "url": "./images/open_book.png",
+      "style": "background: none; max-height: 30px; min-height: 30px"
+    },    
     "logo": {
       "rootStyle": "background-color: #a5b807; text-align: center; padding: 20px;",
       "logo": "http://lanfly.vicp.io/logo.png",
@@ -114,19 +113,19 @@
       "titleStyle": "color: #FFF; text-align: center;",
       "url": "http://timor.tech"
     },  
-     "favicon": "images/github32.png",           
-     "hide-element": {
-            "elements": [".gitbook-link"]
-        },
-     "github": {
-       "url": "https://github.com/wilenwu/wilenwu.github.io"
+    "favicon": "github32.png",           
+    "hide-element": {
+      "elements": [".gitbook-link"]
+    },
+    "github": {
+      "url": "https://github.com/wilenwu/wilenwu.github.io"
     },
     "donate": {
-      "button": "打赏",
+      "button": "赏",
       "alipayText": "支付宝",
-      //"wechatText": "微信",
+      "wechatText": "微信",
       "alipay": "images/nezha.png",
-      //"wechat": "url"
+      "wechat": "url"
     },
     "prism": {
       "css": [
@@ -143,36 +142,35 @@
     },
     "flexible-alerts": {
       "style": "callout",
-      "comment": {  // comment 个性化
+      "comment": {  // 个性化comment
         "label": "Comment",
         "icon": "fa fa-comments",
         "className": "info"
       }
     },   
-    // https://github.com/zq99299/gitbook-plugin-anchor-navigation-ex/blob/master/doc/config.md
-    "anchor-navigation-ex": {
-        "showLevel": true,
-        "associatedWithSummary": true,
-        "printLog": false,
-        "multipleH1": true,
-        "mode": "float",
-        "showGoTop":true,
-        "float": {
-            "floatIcon": "fa fa-navicon",
-            "showLevelIcon": false,
-            "level1Icon": "fa fa-hand-o-right",
-            "level2Icon": "fa fa-hand-o-right",
-            "level3Icon": "fa fa-hand-o-right"
-        },
-        "pageTop": {
-            "showLevelIcon": false,
-            "level1Icon": "fa fa-hand-o-right",
-            "level2Icon": "fa fa-hand-o-right",
-            "level3Icon": "fa fa-hand-o-right"
-        }
+    "anchor-navigation-ex": { // https://github.com/zq99299/gitbook-plugin-anchor-navigation-ex/blob/master/doc/config.md
+      "showLevel": true,
+      "associatedWithSummary": false,
+      "printLog": false,
+      "multipleH1": true,
+      "mode": "float",
+      "showGoTop":true,
+      "float": {
+          "floatIcon": "fa fa-navicon",
+          "showLevelIcon": false,
+          "level1Icon": "fa fa-hand-o-right",
+          "level2Icon": "fa fa-hand-o-right",
+          "level3Icon": "fa fa-hand-o-right"
+      },
+      "pageTop": {
+          "showLevelIcon": false,
+          "level1Icon": "fa fa-hand-o-right",
+          "level2Icon": "fa fa-hand-o-right",
+          "level3Icon": "fa fa-hand-o-right"
+      }
     },
     "sitemap": {
-        "hostname": "http://wilenwu.github.io"
+      "hostname": "http://wilenwu.github.io"
     },
     "baidu": {
       "token": "873a3ba02856122b60c91114a489f967"

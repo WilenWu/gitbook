@@ -1,6 +1,6 @@
 {
-  "root": "./bookshelf/",
-  "title": "书架",
+  "root": "./ggplot2-extensions/",
+  "title": "ggplot2 extensions",
   "author": "WilenWu",
   "language": "zh-hans",
   
@@ -9,17 +9,16 @@
     "summary": "SUMMARY.md"
   },  
   
-"links" : {
+  "links" : {
     "sidebar" : {
-        "<font size=6><i class='fa fa-home'></i></font>": "https://wilenwu.github.io"
+      "<font size=5><i class='fa fa-home'></i></font>": "https://wilenwu.github.io"
     }
-},
+  },
     
   "plugins": [
-    "theme-comscore",
+    "theme-comscore", "-sharing",  "-fontsettings",
     "custom-favicon", 
     "insert-logo",
-    "-sharing",  "-fontsettings",
     "search-pro",  "-search",  "-lunr",
     "expandable-chapters",
     "splitter",
@@ -28,13 +27,11 @@
     "tbfed-pagefooter",
     "github", 
     "mygitalk", 
+    "popup", 
     "prism",  "-highlight",  
     "copy-code-button",
     "codeblock-filename",
-    "advanced-emoji",
     "flexible-alerts",
-    "emphasize",
-    "katex-plus",
     "mermaid",
     "pageview-count",
     "sitemap",
@@ -42,62 +39,62 @@
   ],
   
   "pluginsConfig": {
-        "theme-default": {
-            "showLevel": false
-        },
-        "favicon": "github32.png",
-        "search-pro": {
-          "cutWordLib": "nodejieba",
-          "defineWord" : ["Gitbook Use"]
-        },
+    "theme-default": {
+        "showLevel": false
+    },
+    "favicon": "github32.png",
+    "search-pro": {
+      "cutWordLib": "nodejieba",
+      "defineWord" : ["Gitbook Use"]
+    },
     "insert-logo": {
-        "url": "open_book.png",
-        "style": "background: none; max-height: 30px; min-height: 30px"
-      },   
-       "anchor-navigation-ex": {
-         "showLevel": true,
-         "associatedWithSummary": false,
-         "printLog": false,
-         "multipleH1": true,
-         "mode": "float"
-        },
-     "hide-element": {
-          "elements": [".gitbook-link"]
-        },
-      "tbfed-pagefooter": {
-        "copyright":"Copyright &copy WilenWu",
-        "modify_label": "更新于 ",
-        "modify_format": "YYYY-MM-DD HH:mm:ss"
-      },
-       "github": {
-         "url": "https://github.com/wilenwu/wilenwu.github.io"
-      },
-      "mygitalk": {
-            "clientID": "60decc199e52a19f035d",
-            "clientSecret": "fe95a75c03105bf4566a72968f6dfcfd3b861344",
-            "repo": "gitalk",
-            "owner": "wilenwu",
-            "admin": ["wilenwu"],
-            "distractionFreeMode": true
-        },
-      "prism": {
-        "css": [
-          "prismjs/themes/prism-okaidia.css"
-        ]
-      },
-      "flexible-alerts": {
-        "style": "callout",
-        "comment": {
-          "label": "Comment",
-          "icon": "fa fa-comments",
-          "className": "info"
-        }
-      }, 
-      "sitemap": {
-          "hostname": "http://wilenwu.github.io"
-      },
-      "baidu": {
-        "token": "873a3ba02856122b60c91114a489f967"
+      "url": "open_book.png",
+      "style": "background: none; max-height: 30px; min-height: 30px"
+    },   
+    "anchor-navigation-ex": {
+      "showLevel": false,
+      "associatedWithSummary": false,
+      "printLog": false,
+      "multipleH1": true,
+      "mode": "float"
+    },
+    "hide-element": {
+      "elements": [".gitbook-link"]
+    },
+    "tbfed-pagefooter": {
+      "copyright":"Copyright &copy WilenWu",
+      "modify_label": "更新于 ",
+      "modify_format": "YYYY-MM-DD HH:mm:ss"
+    },
+    "github": {
+      "url": "https://github.com/wilenwu/wilenwu.github.io"
+    },
+    "mygitalk": {
+      "clientID": "60decc199e52a19f035d",
+      "clientSecret": "fe95a75c03105bf4566a72968f6dfcfd3b861344",
+      "repo": "gitalk",
+      "owner": "wilenwu",
+      "admin": ["wilenwu"],
+      "distractionFreeMode": true
+     },
+    "prism": {
+      "css": [
+        "prismjs/themes/prism-okaidia.css"
+      ]
+    },
+    "flexible-alerts": {
+      "style": "callout",
+      "comment": {
+        "label": "Comment",
+        "icon": "fa fa-comments",
+        "className": "info"
       }
+    }, 
+    "sitemap": {
+      "hostname": "http://wilenwu.github.io"
+    },
+    "baidu": {
+      "token": "873a3ba02856122b60c91114a489f967"
     }
+  }
 }
