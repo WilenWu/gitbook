@@ -37,28 +37,28 @@
   
   "variables": {
       "themeFexa":{
-          "showHome": false, //是否显示 home 图标，默认显示
+          "showHome": false, //是否显示 home 图标（默认显示），回到根目录（相对路径）
           "showNavigator": false, //是否显示 内容的导航树
           "nav":[
               {
-                  "url":"http://wilenwu.github.io",
+                  "url":"xxx",
                   "target":"_blank",
-                  "name": "主页"
+                  "name": "友链"
               },
               {
-                  "url":"http://wilenwu.github.io",
+                  "url": "xxx",
                   "target":"_blank",
-                  "name": "分类"
+                  "name":  "<font size=5><i class='fa fa-downlod'></i></font>"
               }
           ]
       }
   },
     
   "plugins": [
-    "theme-comscore", "-sharing", "-fontsettings", // "theme-fexa-black",
+    "theme-comscore", "-sharing", "-fontsettings", // "theme-fexa-black", fexa主题summary无分块线条分割
     "custom-favicon", //标题栏图标(theme-fexa主题包含)
     "search-pro",  "-search",  "-lunr",
-    "insert-logo", // "logo"
+    "insert-logo", // "logo" //搜索框上方logo(theme-fexa主题包含)
     "expandable-chapters",  //折叠侧边栏
     "splitter",  //侧边栏宽度可调节
     "anchor-navigation-ex",  //悬浮按钮目录+回到顶部
@@ -67,6 +67,7 @@
     "hide-element", // 侧边栏不必要信息隐藏
     "tbfed-pagefooter", //页脚   
     "github", // 右上角github图标
+    //"github-buttons",
     "donate",  // 打赏    
     "mygitalk",  // "disqus" 国内不支持
     "auto-scroll-table",  //表格滚动条（会改变标题栏颜色？）
@@ -79,7 +80,7 @@
     "advanced-emoji",
     "flexible-alerts", // note标签插件 NOTE | TIP | WARNING | DANGER
     "emphasize", //文字底色 {% em type="green" %}highlighted in green!{% endem %}
-    "katex",
+    "katex-plus", // 有bug，启用后$不闭合，会报错
     "mermaid",
     "pageview-count", // 阅读量计数
     "sitemap",
@@ -89,8 +90,8 @@
   "pluginsConfig": {
     "theme-fexa":{
       "search-placeholder":"输入关键字搜索", //搜索框提示信息
-      "logo":"./logo.png", //logo地址
-      "favicon": "./favicon.ico" //ico地址
+      "logo":"./images/logo.png", //logo地址
+      "favicon": "./images/favicon.png" //ico地址
     },
     "fontsettings": {
       "theme": "sepia",
@@ -119,6 +120,14 @@
     },
     "github": {
       "url": "https://github.com/wilenwu/wilenwu.github.io"
+    },
+    "github-buttons": {  //https://github.com/azu/gitbook-plugin-github-buttons
+      "buttons": [{
+        "user": "wilenwu",   
+        "repo": "wilenwu.github.io",
+        "type": "star",  // star | watch | fork
+        "size": "large"  //small | large
+      }]
     },
     "donate": {
       "button": "赏",

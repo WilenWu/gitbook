@@ -1,6 +1,6 @@
 {
-  "root": "./ggplot2-extensions/",
-  "title": "ggplot2 extensions",
+  "root": "./bookshelf/",
+  "title": "bookshelf",
   "author": "WilenWu",
   "language": "zh-hans",
   
@@ -8,32 +8,39 @@
     "readme": "README.md",
     "summary": "SUMMARY.md"
   },  
-  
-  "links" : {
-    "sidebar" : {
-      "<font size=5><i class='fa fa-home'></i></font>": "https://wilenwu.github.io"
-    }
+
+  "variables": {
+      "themeFexa":{
+          "showHome": true, 
+          "showNavigator": false,
+          "nav":[
+              {
+                  "url": "/bookshelf/",
+                  "target": "_blank",
+                  "name": "返回书架"
+              }
+          ]
+      }
   },
     
   "plugins": [
-    "theme-comscore", "-sharing",  "-fontsettings",
-    "custom-favicon", 
-    "insert-logo",
+    "theme-fexa-black", "-sharing",  "-fontsettings",
     "search-pro",  "-search",  "-lunr",
     "expandable-chapters",
     "splitter",
     "anchor-navigation-ex",
     "hide-element",
     "tbfed-pagefooter",
-    "github", 
+    "github-buttons", 
     "mygitalk", 
     "popup", 
     "prism",  "-highlight",  
     "copy-code-button",
     "codeblock-filename",
     "flexible-alerts",
+    "advanced-emoji",
+    "katex-plus",
     "mermaid",
-    "pageview-count",
     "sitemap",
     "baidu"
   ],
@@ -41,6 +48,11 @@
   "pluginsConfig": {
     "theme-default": {
         "showLevel": false
+    },
+    "theme-fexa":{
+      "search-placeholder":"输入关键字搜索", 
+      "logo":"./images/logo.png", 
+      "favicon": "./images/favicon.png" 
     },
     "favicon": "github32.png",
     "search-pro": {
@@ -66,9 +78,6 @@
       "modify_label": "更新于 ",
       "modify_format": "YYYY-MM-DD HH:mm:ss"
     },
-    "github": {
-      "url": "https://github.com/wilenwu/wilenwu.github.io"
-    },
     "mygitalk": {
       "clientID": "60decc199e52a19f035d",
       "clientSecret": "fe95a75c03105bf4566a72968f6dfcfd3b861344",
@@ -77,6 +86,14 @@
       "admin": ["wilenwu"],
       "distractionFreeMode": true
      },
+    "github-buttons": { 
+      "buttons": [{
+        "user": "wilenwu",   
+        "repo": "wilenwu.github.io",
+        "type": "star",
+        "size": "small" 
+      }]
+    },
     "prism": {
       "css": [
         "prismjs/themes/prism-okaidia.css"

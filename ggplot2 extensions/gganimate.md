@@ -9,9 +9,9 @@ categories: [R,Visualise]
 sticky: false
 ---
 
-# gganimate: Create easy animations with ggplot2
+# [gganimate][gganimate]: Create easy animations with ggplot2
 
-[GitHub链接](https://github.com/dgrtwo/gganimate)
+[gganimate]: https://github.com/dgrtwo/gganimate
 
 ## ggplot对象
 
