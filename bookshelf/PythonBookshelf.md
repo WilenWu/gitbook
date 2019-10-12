@@ -16,15 +16,15 @@ copyright: false
 
 ## <font color="green">IDE</font>
 
-- :white_large_square:  [常用的Python IDE][ide]  
-- :ballot_box_with_check:  [Jupyter Notebook][Jupyter]  
+- [ ]  [常用的Python IDE][ide]  
+- :white_check_mark:  [Jupyter Notebook][Jupyter]  
 
 [ide]: /posts/python/PythonNotebook(Python-Basics)--common-editor.html
 [Jupyter]: /posts/python/PythonNotebook(Python-Basics)--Jupyter-Notebook.html
 
 ## <font color="green">Python Basics</font>  
 
-- :ballot_box_with_check:  [Python基础][Base]: [Python 3 官方中文文档](base_doc)  
+- [x]  [Python基础][Base]: [Python 3 官方中文文档](base_doc)  
 - :heart:  [rpy2][rpy2]： Python 通过rpy2调用 R语言  
 
 [Base]: /posts/python/PythonNotebook(Python-Basics)--Python-base.html
@@ -33,9 +33,9 @@ copyright: false
 
 ## <font color="green">Standard Library</font>  
 
-- :ballot_box_with_check:  [datetime+time+calendar][datetime]  
-- :ballot_box_with_check:  [math+random][math]  
-- :ballot_box_with_check:  [re][re]：正则表达式调用库
+- :white_check_mark:  [datetime+time+calendar][datetime]  
+- :white_check_mark:  [math+random][math]  
+- :white_check_mark:  [re][re]：正则表达式调用库
 - :heart:  [tkinter][tk]：Python 的标准 GUI 库  
 - :white_large_square:  [threading][threading] ：多线程  
 - :white_large_square:  [multiprocessing][mul]： 多进程  
@@ -54,7 +54,7 @@ copyright: false
 
 ## <font color="green">Scientific Computing</font>  
 
-- :ballot_box_with_check:  [NumPy][NumPy]：使用 Python 进行科学计算的基础包。  
+- :white_check_mark:  [NumPy][NumPy]：使用 Python 进行科学计算的基础包。  
 - :white_large_square:  PyDy：PyDy 是 Python Dynamics 的缩写，用来为动力学运动建模工作流程提供帮助， 基于NumPy, SciPy, IPython 和 matplotlib。  
 - :heart:  [SciPy][SciPy]：由一些基于 Python ，用于数学，科学和工程的开源软件构成的生态系统。  
 - :heart:  [SymPy][SymPy]：SymPy是一个符号计算的Python库  
@@ -68,8 +68,8 @@ copyright: false
 
 ## <font color="green">Data Analysis</font>  
 
-- :ballot_box_with_check:  [pandas][pandas]：提供高性能，易用的数据结构和数据分析工具。  
-- :ballot_box_with_check:  [pandas(Time Series)][time series]: 时间序列数据处理工具。  
+- :white_check_mark:  [pandas][pandas]：提供高性能，易用的数据结构和数据分析工具。  
+- :white_check_mark:  [pandas(Time Series)][time series]: 时间序列数据处理工具。  
 - :heart:  blaze：NumPy 和 Pandas 的大数据接口。  
 - :heart:  orange：通过可视化编程或 Python 脚本进行数据挖掘，数据可视化，分析和机器学习。  
 
@@ -80,8 +80,8 @@ copyright: false
 
 *The Website is the API(Application Programming Interface,应用程序编程接口)...*  
 
-- :ballot_box_with_check:  requests: 自动爬取HTML页面，自动网路请求提交。  
-- :ballot_box_with_check:  BeautifulSoup ：解析HTML页面（[中文官网][bs4]）。  
+- :white_check_mark:  requests: 自动爬取HTML页面，自动网路请求提交。  
+- :white_check_mark:  BeautifulSoup ：解析HTML页面（[中文官网][bs4]）。  
 - :heart:  Scrapy：专业的网络爬虫框架。  
 - :white_large_square:  Selenium: 是一个用于Web应用程序测试的工具，能够模拟用户行为与浏览器交互。  
 
@@ -89,8 +89,8 @@ copyright: false
 
 ## <font color="green">Visualise</font>  
 
-- :ballot_box_with_check:  [matplotlib][matplotlib]: 是一个 Python 的 2D绘图库。  
-- :ballot_box_with_check:  [seaborn][seaborn]：基于matplotlib封装的数据可视化库。  
+- :white_check_mark:  [matplotlib][matplotlib]: 是一个 Python 的 2D绘图库。  
+- :white_check_mark:  [seaborn][seaborn]：基于matplotlib封装的数据可视化库。  
 - :white_large_square:  bqplot： Jupyter Notebook的交互式绘图库  
 - :white_large_square:  bokeh：用 Python 进行交互式 web 绘图。  
 - :heart:  [ggplot][ggplot]：ggplot port for python  
@@ -104,8 +104,8 @@ copyright: false
 
 ## <font color="green">Machine Learning</font>  
 
-- :ballot_box_with_check:  [sklearn][scikit-learn]：基于 SciPy 构建的机器学习 Python 模块。  
-- :ballot_box_with_check:  [statsmodels][statsmodels]：统计建模和计量经济学。  
+- :white_check_mark:  [sklearn][scikit-learn]：基于 SciPy 构建的机器学习 Python 模块。  
+- :white_check_mark:  [statsmodels][statsmodels]：统计建模和计量经济学。  
 - :heart:  [xgboost][xgboost]： 一种可扩展，可移植且分布式的渐变增强库  
 
 [scikit-learn]: /posts/python/PythonNotebook(Machine-Learning)--sklearn.html
@@ -114,7 +114,7 @@ copyright: false
 
 ## <font color="green">Deep Learning</font>  
 
-- :ballot_box_with_check:  [TensorFlow][TensorFlow]：Google开源的最受欢迎的深度学习框架。  
+- :white_check_mark:  [TensorFlow][TensorFlow]：Google开源的最受欢迎的深度学习框架。  
 - :white_large_square:  [PyTorch][PyTorch]: Facebook 的 AI 研究团队发布了一个 Python 工具包，专门针对 GPU 加速的深度神经网络（DNN）编程。  
 - :heart:  [Keras][Keras]: 以 tensorflow/theano/CNTK 为后端的深度学习封装库，快速上手神经网络。[莫烦PYTHON](https://morvanzhou.github.io/tutorials/machine-learning/theano/)  
 - :white_large_square:  [Theano][Theano]:  基于TensorFlow，用于快速数值计算的库。  
@@ -126,7 +126,7 @@ copyright: false
 
 ## <font color="green">MapReduce</font>  
 
-- :ballot_box_with_check:  PySpark : Apache Spark Python API  
+- :white_check_mark:  PySpark : Apache Spark Python API  
 
 ## <font color="green">NLP(Natural Language Processing)</font>  
 
@@ -147,6 +147,6 @@ copyright: false
 
 ## <font color="green">Learning Python </font> 
 
-- :ballot_box_with_check:  [Python基础中文教程](http://www.pythondoc.com/pythontutorial3/)  
+- :white_check_mark:  [Python基础中文教程](http://www.pythondoc.com/pythontutorial3/)  
 
 ------

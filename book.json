@@ -38,7 +38,6 @@
     "copy-code-button",
     "codeblock-filename",
     "flexible-alerts",
-    "advanced-emoji",
     "katex-plus",
     "mermaid",
     "sitemap",
@@ -54,13 +53,13 @@
       "logo":"./images/logo.png", 
       "favicon": "./images/favicon.png" 
     },
-    "favicon": "github32.png",
+    "favicon": "favicon.png",
     "search-pro": {
       "cutWordLib": "nodejieba",
       "defineWord" : ["Gitbook Use"]
     },
     "insert-logo": {
-      "url": "open_book.png",
+      "url": "logo.png",
       "style": "background: none; max-height: 30px; min-height: 30px"
     },   
     "anchor-navigation-ex": {

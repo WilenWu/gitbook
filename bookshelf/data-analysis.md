@@ -10,8 +10,8 @@ copyright: false
 
 # <font color="red">数据分析</font>
 
-- :ballot_box_with_check:   [二分类模型评价指标][evaluation]  
-- :ballot_box_with_check:   [数据分析理论概览][theory]  
+- :white_check_mark:   [二分类模型评价指标][evaluation]  
+- :white_check_mark:   [数据分析理论概览][theory]  
 
 [evaluation]: /posts/data-analysis/classification-evaluation.html
 [theory]: /posts/data-analysis/Overview-of-Data-Analysis-Theory.html
@@ -20,12 +20,12 @@ copyright: false
 
 # <font color="red">大数据</font>
 
-致谢，[ApacheCN 中文开源组织](http://www.apachecn.org/#)：致力于官方文档及AI书籍中文翻译。  
+致谢，[ApacheCN 中文开源组织](http://www.apachecn.org/#)：致力于官方文档及AI书籍中文翻译。  :smile:
 
 ## <font color="green">Linux</font>  
 
-- :ballot_box_with_check:  [Linux基础知识][linux]  
-- :ballot_box_with_check:  [Linux Shell 教程][shell]  
+- :white_check_mark:  [Linux基础知识][linux]  
+- :white_check_mark:  [Linux Shell 教程][shell]  
 
 [linux]: https://blog.csdn.net/qq_41518277/article/details/80720390
 [shell]: https://blog.csdn.net/qq_41518277/article/details/80772546
@@ -39,9 +39,9 @@ copyright: false
 ## <font color="green">Hive</font>  
 
 - :white_large_square:  Hive安装配置  
-- :ballot_box_with_check:   [Hive基础知识][hivebasic]  
-- :ballot_box_with_check:   [SQL手册][sql]  
-- :ballot_box_with_check:   [HiveQL][HiveQL]  
+- :white_check_mark:   [Hive基础知识][hivebasic]  
+- :white_check_mark:   [SQL手册][sql]  
+- :white_check_mark:   [HiveQL][HiveQL]  
 - :white_large_square:  RHive：Apache Hive促进分布式计算的R扩展  
 
 [sql]: /posts/big-data/SQLNotebook.html
@@ -50,12 +50,12 @@ copyright: false
 
 ## <font color="green">Spark</font>
 
-- :ballot_box_with_check:   [Spark安装配置][spark]  
-- :ballot_box_with_check:   [Spark基础知识][spark_base]  
+- :white_check_mark:   [Spark安装配置][spark]  
+- :white_check_mark:   [Spark基础知识][spark_base]  
 - :heart:  scala：spark 基础语言 
 - :heart:  sparkR： Apache Spark R API  
 - :heart:  sparklyr：来自RStudio的Apache Spark的R接口，提供dplyr后端  
-- :ballot_box_with_check:  [PySpark][PySpark] : Apache Spark Python API  
+- :white_check_mark:  [PySpark][PySpark] : Apache Spark Python API  
 - :white_large_square:  [Akka][akka]：Akka并发编程  
 
 [spark]: /posts/big-data/BigDataNotebook(Spark)--Spark-installation.html

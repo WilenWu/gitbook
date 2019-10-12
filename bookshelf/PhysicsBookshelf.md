@@ -12,23 +12,23 @@ copyright: false
 
 ## <font color="green">foundational physics</font>  
 
-- :ballot_box_with_check:   普通物理（力学，热学，光学，电磁学，原子物理学）  
-- :ballot_box_with_check:   理论力学  
-- :ballot_box_with_check:   电动力学  
-- :ballot_box_with_check:   热力学与统计物理  
-- :ballot_box_with_check:   量子力学  
+- :white_check_mark:   普通物理（力学，热学，光学，电磁学，原子物理学）  
+- :white_check_mark:   理论力学  
+- :white_check_mark:   电动力学  
+- :white_check_mark:   热力学与统计物理  
+- :white_check_mark:   量子力学  
 - :white_large_square:  弹性力学   
 - :white_large_square:  分析力学   
 - :heart:  流体力学   
 
 ## <font color="green">advanced physics</font>  
 
-- :ballot_box_with_check:   狭义相对论  
-- :ballot_box_with_check:   广义相对论  
-- :ballot_box_with_check:   高等量子理论  
-- :ballot_box_with_check:   场论基础 (经典场论，相对论场论，量子场论)   
-- :ballot_box_with_check:   规范场论  
-- :ballot_box_with_check:   量子场论  
+- :white_check_mark:   狭义相对论  
+- :white_check_mark:   广义相对论  
+- :white_check_mark:   高等量子理论  
+- :white_check_mark:   场论基础 (经典场论，相对论场论，量子场论)   
+- :white_check_mark:   规范场论  
+- :white_check_mark:   量子场论  
 - :white_large_square:  线性物理  
 - :heart:  弦理论和M理论   
 

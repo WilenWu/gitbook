@@ -55,7 +55,7 @@
   },
     
   "plugins": [
-    "theme-comscore", "-sharing", "-fontsettings", // "theme-fexa-black", fexa主题summary无分块线条分割
+    "theme-comscore", "-sharing", "-fontsettings", // "theme-fexa-black", fexa主题summary无分块线条分割，与emoji插件有冲突？
     "custom-favicon", //标题栏图标(theme-fexa主题包含)
     "search-pro",  "-search",  "-lunr",
     "insert-logo", // "logo" //搜索框上方logo(theme-fexa主题包含)
@@ -73,7 +73,7 @@
     "auto-scroll-table",  //表格滚动条（会改变标题栏颜色？）
     //"lightbox", //弹窗显示图片
     "popup", //打开新的页面查看图片
-    "todo", // 复选框（有bug）
+    "todo", // 复选框，后方链接不能正常显示
     "prism",  "-highlight",
     "copy-code-button",
     "codeblock-filename", //为代码块添加文件名称
