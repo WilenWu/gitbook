@@ -1,6 +1,6 @@
 {
-  "root": "./foundational-physics/",
-  "title": "基础物理",
+  "root": "./Calculus/",
+  "title": "微积分",
   "author": "WilenWu",
   "language": "zh-hans",
   
@@ -24,8 +24,9 @@
   },
     
   "plugins": [
-    "theme-fexa-black", "-sharing",  "-fontsettings",
+    "theme-fexa-black", "-sharing",
     "search-pro",  "-search",  "-lunr",
+    "yahei",
     "expandable-chapters",
     "splitter",
     "anchor-navigation-ex",
@@ -57,6 +58,10 @@
     "search-pro": {
       "cutWordLib": "nodejieba",
       "defineWord" : ["Gitbook Use"]
+    },
+    "fontSettings": {
+      "theme": "white",
+      "family": "yahei"
     },
     "insert-logo": {
       "url": "logo.png",
